@@ -8,6 +8,12 @@ var arrOfStr = {
 };
 
 /* GET users listing. */
+router.get('/', function (req, res, next) {
+  res.render('users', {
+    respond: "/users"
+  });
+});
+
 router.get('/:id', function (req, res, next) {
   var getId = req.params.id;
   var getIdStr = arrOfStr[getId];
